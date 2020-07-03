@@ -1,0 +1,97 @@
+:root {
+    --animation-max-blur: 5px;
+    --font-size-max: 32px;
+
+    --color-matrix-black: #0D0208;
+    --color-matrix-dark-green: #003B00;
+    --color-matrix-green: #008F11;
+    --color-matrix-light-green: #00FF41;
+}
+
+@font-face {
+    font-family: 'matrix';
+    src: URL('./matrix.ttf') format('truetype');
+}
+
+@keyframes slide-bottom {
+    0% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(200%);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-matrix-black);
+    overflow: hidden;
+    font-family: matrix;
+}
+
+.letter-column {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-shadow: 0px 0px 4px var(--color-matrix-green);
+    position: absolute;
+    letter-spacing: 0.01px;
+
+    opacity: 0;
+}
+
+/* Color Controle */
+.letter-column[color="light"] {
+    color: var(--color-matrix-light-green);
+}
+.letter-column[color="normal"] {
+    color: var(--color-matrix-green);
+}
+.letter-column[color="dark"] {
+    color: var(--color-matrix-dark-green);
+}
+
+/* Font Size */
+.letter-column[size="small"] {
+    font-size: 20px;
+}
+.letter-column[size="normal"] {
+    font-size: 26px;
+}
+.letter-column[size="big"] {
+    font-size: 32px;
+}
+
+/* Speed Controle */
+.letter-column[speed="1s"] {
+    animation: slide-bottom 5s infinite;
+}
+.letter-column[speed="2s"] {
+    animation: slide-bottom 6s infinite;
+}
+.letter-column[speed="3s"] {
+    animation: slide-bottom 7s infinite;
+}
+.letter-column[speed="4s"] {
+    animation: slide-bottom 8s infinite;
+}
+.letter-column[speed="5s"] {
+    animation: slide-bottom 9s infinite;
+}
+.letter-column[speed="6s"] {
+    animation: slide-bottom 10s infinite;
+}
+.letter-column[speed="7s"] {
+    animation: slide-bottom 11s infinite;
+}
+.letter-column[speed="8s"] {
+    animation: slide-bottom 12s infinite;
+}
+.letter-column[speed="9s"] {
+    animation: slide-bottom 13s infinite;
+}
+.letter-column[speed="10s"] {
+    animation: slide-bottom 14s infinite;
+}
