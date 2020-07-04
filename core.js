@@ -51,4 +51,8 @@ function generate(amount) {
 
 window.onload = () => {
     generate(500);
+
+    let audio = new Audio('./music.mp3');
+    audio.play();
+    audio.volume = 0.5;
 }
