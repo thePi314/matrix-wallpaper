@@ -54,5 +54,5 @@ window.onload = () => {
 
     let audio = new Audio('./music.mp3');
     audio.play();
-    audio.volume = 0.5;
+    audio.volume = 0.3;
 }
